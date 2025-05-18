@@ -1,12 +1,12 @@
 package fsm.statemachine;
 
-public class Threater {
-    private Seat[][] seats;
+public class Theater {
+    private final Seat[][] seats;
 
-    public Threater(int rows, int cols) {
-        seats = new Seat[rows][cols];
+    public Theater(int rows, int colm) {
+        seats = new Seat[rows][colm];
         for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; cols++) {
+            for (int j = 0; j < colm; j++) {
                 seats[i][j] = new Seat();
             }
         }
@@ -48,7 +48,7 @@ public class Threater {
                     case BOOKED -> "X";
                     case CANCELLED -> "-";
                 };
-                System.out.println(symbol + " ");
+                System.out.printf(symbol + " ");
             }
             System.out.println();
         }
